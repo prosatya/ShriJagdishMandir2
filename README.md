@@ -1,11 +1,1 @@
 # ShriJagdishMandir
-# ShriJagdishMandir
-# ShriJagdishMandir
-# test
-# shrijagdishmandir
-# shrijagdishmandir2
-# shrijagdishmandir
-# shrijagdishmandir
-# shrijagdishmandir
-# test
-# shrijagdishmandir
