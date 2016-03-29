@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rootlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.ActivityMain"
+    android:layout_marginTop="57dp"
+    tools:showIn="@layout/app_bar_activity_main">
+
+    <!--showing pager styrip just above the view pager
+    to indicate about the current pager-->
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:background="#FFBF60"
+        android:layout_width="match_parent"
+        android:layout_height="48dip" />
+
+    <!--main view pager inflating different pagers
+    -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:background="#F9D49E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabs"
+        tools:context=".MainActivity" />
+
+    <!-- hidden menu for the fab full menu over the activity
+    -->
+    <com.matictechnology.shrijagdishmandir.Utility.ClipRevealFrame
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tumblr_primary"
+        android:visibility="invisible"
+        >
+        <!--arc layout to show the different buttons of arc layout-->
+        <com.ogaclejapan.arclayout.ArcLayout
+            android:id="@+id/arc_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:arc_axisRadius="@dimen/layout_child_offset_tumblr"
+            app:arc_origin="center"
+            app:arc_radius="@dimen/layout_radius_tumblr"
+            >
+            <!--iniotially hidden buttons to contain the arc layout buttons-->
+            <Button
+                android:id="@+id/haridwar"
+                android:textSize="10dp"
+                style="@style/Item.Tumblr"
+                android:background="@drawable/tumblr_orange_oval"
+                android:text="HARIDWAR"
+
+                />
+
+            <Button
+                android:id="@+id/bhopal"
+                android:textSize="10dp"
+                style="@style/Item.Tumblr"
+                android:background="@drawable/tumblr_green_oval"
+                android:text="BHOPAL"
+                />
+
+            <Button
+                android:id="@+id/awlighat"
+                android:textSize="10dp"
+                style="@style/Item.Tumblr"
+                android:background="@drawable/tumblr_white_oval"
+                android:text="AWLIGHAT"
+                />
+
+            <Button
+                android:id="@+id/omkareshwar"
+                android:textSize="9dp"
+                style="@style/Item.Tumblr"
+                android:background="@drawable/tumblr_grey_oval"
+                android:text="Omkareshwar"
+                />
+
+            <Button
+                android:id="@+id/ujjain"
+                android:textSize="10dp"
+                style="@style/Item.Tumblr"
+                android:background="@drawable/tumblr_blue_oval"
+                android:text="Ujjain"
+                />
+
+        </com.ogaclejapan.arclayout.ArcLayout>
+
+        <!--center button to be included in the arc layout-->
+        <Button
+            android:textSize="10dp"
+            android:id="@+id/center_item"
+            style="@style/Item.Tumblr"
+            android:layout_gravity="center"
+            android:background="@drawable/tumblr_red_oval"
+            android:text="contact us"
+            />
+
+    </com.matictechnology.shrijagdishmandir.Utility.ClipRevealFrame>
+
+    <!--fab to show the arc layout-->
+    <Button
+        android:id="@+id/fab"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/tumblr_menu_oval"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        />
+</RelativeLayout>
